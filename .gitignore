@@ -1,0 +1,20 @@
+# Editor directories and files
+.idea
+.vscode
+
+__pycache__/
+.pytest_cache
+.coverage
+.coverage.*
+coverage.xml
+/coverage
+
+
+# pytest debug logs generated via --debug
+pytestdebug.log
+
+# Environments
+.venv
+env/
+venv/
+Footer
