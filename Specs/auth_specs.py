@@ -1,4 +1,6 @@
 from Helpers import *
+from Utils import *
+from Constants import *
 
 
 # Login with valid data and assert that response has key "token"
@@ -11,6 +13,9 @@ def test_successful_login():
 
 # Login with invalid credentials and assert on the returned error
 def test_invalid_login():
-    response = login("hamada", "password1233334d")
+    response = login(
+        generate_random_name(),
+        generate_random_password()
+    )
     assert_ok_status_code(response)
-    assert response.json()['reason'] == 'Bad credentials'
+    assert response.json()['reason'] == invalid_credentials_msg

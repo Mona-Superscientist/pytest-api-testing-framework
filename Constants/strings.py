@@ -1,2 +1,2 @@
-invalid_credentials = 'Bad credentials'
+invalid_credentials_msg = 'Bad credentials'
 
