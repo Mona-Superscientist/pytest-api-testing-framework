@@ -1,3 +1,3 @@
 from .assertions import *
-from .auth import *
-from .bookings import *
+from Helpers.endpoints.auth import *
+from Helpers.endpoints.bookings import *
