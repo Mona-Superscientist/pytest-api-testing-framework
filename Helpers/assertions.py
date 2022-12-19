@@ -1,8 +1,9 @@
 
 def assert_on_status_code(code, response):
     assert response.status_code == code
+    
 
-
+# ASSERTIONS ON STATUS CODE
 def assert_ok_status_code(response):
     assert_on_status_code(200, response)
 
@@ -29,3 +30,13 @@ def assert_forbidden_status_code(response):
 
 def assert_notfound_status_code(response):
     assert_on_status_code(404, response)
+
+
+# ASSERTIONS ON RESPONSE BODY
+def check_response(response, key=None, value=None):
+    assert response.json()[{key}] == value
+
+
+def assert_on_expected_response(response, expected_response):
+    assert response.json() == expected_response
+
