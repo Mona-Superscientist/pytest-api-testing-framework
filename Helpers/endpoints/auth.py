@@ -1,23 +1,13 @@
-import json
-import requests
-
+from ..base_request import *
 from Constants import routes
 
 
 def login(username, password):
-    payload = json.dumps({
+    payload = {
         'username': username,
         'password': password
-    })
-
-    response = requests.post(
-        routes.auth_url,
-        headers={
-            'Content-Type': 'application/json'
-        },
-        data=payload
-    )
-
+    }
+    response = send_post_request(routes.auth_url, payload)
     return response
 
 

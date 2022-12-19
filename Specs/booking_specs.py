@@ -1,6 +1,3 @@
-import json
-
-from pydash import py_
 from Helpers import *
 from Samples import *
 from Utils import *
@@ -11,7 +8,7 @@ def test_get_all_flight_ids():
     assert_ok_status_code(response)
     assert len(response.json()) > 0
     for item in response.json():
-        assert item['booking'] is not None
+        assert item['bookingid'] is not None
 
 
 def test_create_new_booking():
