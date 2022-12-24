@@ -21,3 +21,14 @@ def test_create_new_booking():
     assert response.json()['booking']['firstname'] == firstname
 
 
+def test_update_booking(generate_auth_token, get_booking_id):
+    booking_sample = py_.clone_deep(get_sample('booking.json'))
+    modified_booking_sample = py_.set(booking_sample, 'firstname', generate_random_name())
+    response = update_booking(
+        generate_auth_token("admin", "password123"),
+        get_booking_id(booking_sample),
+        modified_booking_sample
+    )
+    assert_ok_status_code(response)
+    assert response.json()['firstname'] == modified_booking_sample['firstname']
+

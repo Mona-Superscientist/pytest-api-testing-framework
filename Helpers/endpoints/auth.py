@@ -11,8 +11,8 @@ def login(username, password):
     return response
 
 
-def generate_auth_token(username, password):
-    response = login(username, password)
-    json_response = response.json()
-    return json_response['token']
+# def generate_auth_token(username, password):
+#     response = login(username, password)
+#     json_response = response.json()
+#     return json_response['token']
 

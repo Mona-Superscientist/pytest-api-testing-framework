@@ -9,8 +9,8 @@ def _generate_request_headers(token=None):
     else:
         return py_.set(
             py_.clone_deep(get_sample('request-headers.json')),
-            'Authorization',
-            token
+            'Cookie',
+            f'token={token}'
         )
 
 

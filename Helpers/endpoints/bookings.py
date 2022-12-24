@@ -20,3 +20,9 @@ def get_flight_details_by_id(flight_id):
 def create_booking(booking_sample):
     response = send_post_request(booking_url, booking_sample)
     return response
+
+
+def update_booking(token, booking_id, booking_sample):
+    url = f'{booking_url}/{booking_id}'
+    response = send_put_request(url, booking_sample, token)
+    return response

@@ -8,7 +8,7 @@ __pycache__/
 .coverage.*
 coverage.xml
 /coverage
-
+/results
 
 # pytest debug logs generated via --debug
 pytestdebug.log

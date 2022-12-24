@@ -4,3 +4,4 @@ faker==15.3.4
 python-dotenv==0.21.0
 pytest==7.2.0
 pydash==5.1.2
+allure-pytest==2.12.0
