@@ -17,7 +17,7 @@ def test_create_new_booking():
     modified_sample = py_.set(booking_sample, 'firstname', firstname)
     response = create_booking(modified_sample)
     assert_ok_status_code(response)
-    assert response.json()['bookingid'] is not None
+    assert_valid_schema(response, 'booking-schema.json')
     assert response.json()['booking']['firstname'] == firstname
 
 
